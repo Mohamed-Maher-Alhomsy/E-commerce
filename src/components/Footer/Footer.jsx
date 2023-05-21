@@ -92,14 +92,18 @@ const Footer = () => {
                   <span>
                     <i className="ri-phone-line"></i>
                   </span>
-                  <p>+963123465789</p>
+                  <p>+963 992320679</p>
                 </ListGroupItem>
 
                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                   <span>
                     <i className="ri-mail-line"></i>
                   </span>
-                  <p>maheralhomsy2002@gmail.com</p>
+                  <p>
+                    <a href="mailto:maheralhomsy2002@gmail.com">
+                      maheralhomsy2002@gmail.com
+                    </a>
+                  </p>
                 </ListGroupItem>
               </ListGroup>
             </div>
