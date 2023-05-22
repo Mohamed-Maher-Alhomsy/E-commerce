@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Container, Row, Col } from "reactstrap";
 
 import CommonSection from "../components/UI/CommonSection";
 import Helmet from "../components/Helmet/Helmet";
-import products from "../assets/data/products";
+// import products from "../assets/data/products";
 import ProductsList from "../components/UI/ProductsList";
+import useGetDate from "../hooks/useGetDate";
 
 import "../styles/shop.css";
 
 const ShopPage = () => {
+  const { data: products, loading } = useGetDate("products");
   const [productsData, setProductsData] = useState(products);
+
+  useEffect(() => {
+    setProductsData(products);
+  }, [products]);
 
   const handleFilter = (e) => {
     const filterValue = e.target.value;
@@ -59,6 +65,10 @@ const ShopPage = () => {
 
     setProductsData(searchedProducts);
   };
+
+  if (loading) {
+    return <h1 className="fw-bold py-5 text-center">Loading...</h1>;
+  }
 
   return (
     <Helmet title="Shop">
