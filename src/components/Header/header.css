@@ -88,7 +88,7 @@
 
 .nav__icons .profile .profile__actions {
   position: absolute;
-  background: var(--card-bg-01);
+  background: #fff;
   top: 97%;
   left: 0;
   width: 150px;
@@ -100,6 +100,7 @@
   line-height: 30px;
   cursor: pointer;
   display: none;
+  box-shadow: -1px 3px 1px #00000042;
 }
 
 .show__profileActions {
@@ -139,6 +140,10 @@
     background: rgba(0, 0, 0, 0.53);
     z-index: 9999;
     display: none;
+  }
+
+  .profile__actions {
+    left: -70px !important;
   }
 
   .menu {
